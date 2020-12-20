@@ -1,0 +1,22 @@
+spring:
+  main:
+    banner-mode: "off"
+
+server:
+  port: 8080
+  ssl:
+    enabled: false
+
+---
+
+spring:
+  profiles: standalone
+  rabbitmq:
+    host: localhost
+
+---
+
+spring:
+  profiles: docker
+  rabbitmq:
+    host: rabbitmq

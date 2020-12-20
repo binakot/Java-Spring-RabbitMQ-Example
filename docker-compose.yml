@@ -1,0 +1,27 @@
+version: '3.4'
+
+networks:
+  overlay:
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: on-failure
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - overlay
+
+  application:
+    build:
+      context: .
+      args:
+        JAR_FILE: ./build/libs/*.jar
+    restart: on-failure
+    environment:
+      - JAVA_OPTIONS=-Xmx256m -Xmx256m
+    ports:
+      - 8080:8080
+    networks:
+      - overlay
