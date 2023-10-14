@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:21
 MAINTAINER Ivan Muratov <binakot@gmail.com>
 
 EXPOSE 8080

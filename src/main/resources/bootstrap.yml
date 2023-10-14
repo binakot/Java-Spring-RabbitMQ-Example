@@ -10,13 +10,15 @@ server:
 ---
 
 spring:
-  profiles: standalone
+  profiles:
+    active: standalone
   rabbitmq:
     host: localhost
 
 ---
 
 spring:
-  profiles: docker
+  profiles:
+    active: docker
   rabbitmq:
     host: rabbitmq
