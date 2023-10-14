@@ -31,3 +31,5 @@ To remove containers with all volumes:
 ```bash
 $ docker-compose down --volumes
 ```
+
+![rabbitmq](./assets/rabbitmq.png)
